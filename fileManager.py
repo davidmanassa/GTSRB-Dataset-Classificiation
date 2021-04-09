@@ -106,8 +106,6 @@ def organizeDataSet(csvFile='dataset.csv', train_size = 0.6, validade_size = 0.2
 
     if not os.path.exists('dataset'):
         os.makedirs('dataset')
-    else:
-        return
     if not os.path.exists('dataset/test'):
         os.makedirs('dataset/test')
     if not os.path.exists('dataset/train'):
@@ -123,6 +121,8 @@ def organizeDataSet(csvFile='dataset.csv', train_size = 0.6, validade_size = 0.2
             os.makedirs('dataset/train/' + str(classId))
         if not os.path.exists('dataset/validation/' + str(classId)):
             os.makedirs('dataset/validation/' + str(classId))
+        else:
+            continue
 
         data = []
 
